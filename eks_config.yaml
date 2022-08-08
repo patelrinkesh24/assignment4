@@ -9,6 +9,10 @@ metadata:
 
 availabilityZones: ["us-east-1a" ,"us-east-1b" ,"us-east-1c"]
 
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["authenticator"]
+    
 managedNodeGroups:
 - name: nodegroup
   desiredCapacity: 2
