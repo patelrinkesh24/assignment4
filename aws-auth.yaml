@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::174494357773:role/eksctl-rupatel3-nodegroup-nodegro-NodeInstanceRole-EED9JNWEVNJL
+      username: system:node:{{EC2PrivateDNSName}}
+kind: ConfigMap
+metadata:
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:mapRoles: {}
+    manager: vpcLambda
+    operation: Update
+    time: "2022-08-09T02:35:23Z"
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapUsers: |
+    - userarn: arn:aws:iam::174494357773:user/rinkeshkumar
+      username: rinkeshkumar
